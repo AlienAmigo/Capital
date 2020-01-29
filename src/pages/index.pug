@@ -1,20 +1,54 @@
-extends ../pug/layout.pug
+//- Стандартный шаблон страницы
+include mixins.pug
 
-block meta
-  title Главная
-  meta(name='description', content='')
+doctype html
+html(class='page  no-js', lang='ru')
 
-//- block append head
-//-   link(rel='stylesheet', href='css/some.css')
+  head
+    meta(charset='utf-8')
+    title Home
+    link(rel='stylesheet', href='css/style.css')
+    script.
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
 
-block header
-  p Лого
+  body
+    noscript У вас отключен JavaScript. Это пугает.
 
-block content
-  h1 Заголовок
+    .jumbotron.top-section
+      header.row
+        logo.logo
+          a.logo__link(href='/')
+            img.logo__img(src='img/logo.png', alt='')
+      .demo-account.row
+        h1.title #[em Get $10,000] on demo trading account
+        p.text.text--white Test Forex trading in the real market environment
+        button.btn.btn-default GET STARTED
 
-//- block footer
-//-   p footer
+      .container.free-simulator
+        .row
+          .col-md-6.col-md-offset-2
+            p.subhead For Beginner Traders
+            h1.title #[em Get $10,000] on demo trading account
+            p.text Are you new to trading financial markets? – Sign up with MTrading and get from $5,000 on your free demo account to practice Forex, and CFDs trading strategies in real market conditions!
+            button.btn.btn-default Open Demo Account
+      .container.demo-account
+        .row
 
-//- block append page-bottom
-//-   script(src='js/some.js')
+
+
+    //- .page__inner
+    //-   .page__content
+
+    //-     block header
+    //-       p Шапка
+
+    //-     block content
+    //-       p Cодержимое
+
+    //-   .page__footer-wrapper
+    //-     block footer
+    //-       p Подвал
+
+    //- block page-bottom
+    //-   script(src='js/vendors.min.js')
+    //-   script(src='js/script.min.js')

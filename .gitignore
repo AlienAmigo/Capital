@@ -1,5 +1,6 @@
 .Saved/
 _arc/
+_design/
 bower_components/
 node_modules/
 .vscode/

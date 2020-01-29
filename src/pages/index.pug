@@ -1,5 +1,5 @@
 //- Стандартный шаблон страницы
-include mixins.pug
+include ../pug/mixins.pug
 
 doctype html
 html(class='page  no-js', lang='ru')
@@ -14,26 +14,59 @@ html(class='page  no-js', lang='ru')
   body
     noscript У вас отключен JavaScript. Это пугает.
 
-    .jumbotron.top-section
-      header.row
-        logo.logo
-          a.logo__link(href='/')
-            img.logo__img(src='img/logo.png', alt='')
-      .demo-account.row
-        h1.title #[em Get $10,000] on demo trading account
-        p.text.text--white Test Forex trading in the real market environment
-        button.btn.btn-default GET STARTED
-
-      .container.free-simulator
+    .top-section
+      .container
         .row
-          .col-md-6.col-md-offset-2
+          .col-lg-4.offset-lg-2
+            header
+              logo.logo
+                a.logo__link(href='/')
+                  img.logo__img(src='img/logo.png', alt='')
+        .row
+          .col-lg-5.offset-lg-2
+            h1.title.title--head #[strong Get $10,000] on demo trading account
+            p.text.text--white Test Forex trading in the real market environment
+            a.btn.btn-default(href='#', role='button') Open Demo Account
+
+    .free-simulator
+      .container
+        .row
+          .col-lg-4.offset-lg-2
             p.subhead For Beginner Traders
-            h1.title #[em Get $10,000] on demo trading account
+            h2.title #[strong Free] trading simulator
             p.text Are you new to trading financial markets? – Sign up with MTrading and get from $5,000 on your free demo account to practice Forex, and CFDs trading strategies in real market conditions!
-            button.btn.btn-default Open Demo Account
-      .container.demo-account
+            .btn.btn-default(href='#', role='button') GET STARTED
+    .benefits
+      .container
         .row
+          h2.title.title--center Demo Account #[strong benefits]
+          .demo
+            .row
+              .col-xs-6.col-sm-4.offset-md-1.col-md-4.benefits-item Real trading experience without risk
+              .col-xs-6.col-sm-4.col-md-2.benefits-item Forex and CFDs trading in real market conditions
+              .col-xs-6.col-sm-4.col-md-4.benefits-item Professional individual support
+              .col-xs-6.col-sm-4.offset-md-1.col-md-4.benefits-item Based on MetaTrader 4 trading platform
+              .col-xs-6.col-sm-4.col-md-2.benefits-item All trading sstrategies allowed
+              .col-xs-6.col-sm-4.col-md-4.benefits-item Unlimited demo balance starting at $5,000
 
+    .start
+      .container
+        .row
+          .col-lg-4.offset-lg-2
+            p.subhead Gain Trading Experience
+            h2.title Start in less#[br]than #[strong 5 minutes]
+            p.text Gain the experience and enter the market with confidence
+            .btn.btn-default(href='#', role='button') Open Demo Account
+          .col-lg-6
+            .start__gallery
+              .start__gallery-item
+                img(src='img/', alt='')
+              .start__gallery-item
+                img(src='img/', alt='')
+              .start__gallery-item
+                img(src='img/', alt='')
+              .start__gallery-item
+                img(src='img/', alt='')
 
 
     //- .page__inner

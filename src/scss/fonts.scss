@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'GothamPro Bold';
+  src:
+    url('../fonts/GothamPro-Bold.eot'),
+    url('../fonts/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GothamPro-Bold.woff') format('woff'),
+    url('../fonts/GothamPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamPro Light';
+  src:
+    url('../fonts/GothamPro-Light.eot'),
+    url('../fonts/GothamPro-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GothamPro-Light.woff') format('woff'),
+    url('../fonts/GothamPro-Light.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src:
+    url('../fonts/OpenSans-Regular.eot'),
+    url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-Regular.woff') format('woff'),
+    url('../fonts/OpenSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans Bold';
+  src:
+    url('../fonts/OpenSans-Bold.eot'),
+    url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-Bold.woff') format('woff'),
+    url('../fonts/OpenSans-Bold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans SemiBold';
+  src:
+    url('../fonts/OpenSans-SemiBold.eot'),
+    url('../fonts/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-SemiBold.woff') format('woff'),
+    url('../fonts/OpenSans-SemiBold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+$ff-GothamPro-Bold: 'GothamPro Bold', Arial, sans-serif;        /* stylelint-disable-line */
+$ff-GothamPro-Light: 'GothamPro Light', Arial, sans-serif;      /* stylelint-disable-line */
+$ff-OpenSans: 'OpenSans', Arial, sans-serif;                    /* stylelint-disable-line */
+$ff-OpenSans-Bold: 'OpenSans Bold', Arial, sans-serif;          /* stylelint-disable-line */
+$ff-OpenSans-SemiBold: 'OpenSans SemiBold', Arial, sans-serif;  /* stylelint-disable-line */
+
+// @mixin GothamPro-Bold($mx-font-size: inherit, $mx-font-color: inherit) {
+//   font-family: 'GothamPro Bold', Arial, sans-serif;
+//   font-weight: 400;
+//   font-style: normal;
+//   font-size: $mx-font-size;
+//   color: $mx-font-color;
+// }
+
+// @mixin GothamPro-Light($mx-font-size, $mx-font-color) {
+//   font-family: 'GothamPro Light', Arial, sans-serif;
+//   font-weight: 400;
+//   font-style: normal;
+//   font-size: $mx-font-size;
+//   color: $mx-font-color;
+// }
+
+// @mixin OpenSans-Bold($mx-font-size, $mx-font-color) {
+//   font-family: 'OpenSans Bold', Arial, sans-serif;
+//   font-weight: 400;
+//   font-style: normal;
+//   font-size: $mx-font-size;
+//   color: $mx-font-color;
+// }
+
+// @mixin OpenSans($mx-font-size, $mx-font-color) {
+//   font-family: 'OpenSans', Arial, sans-serif;
+//   font-weight: 400;
+//   font-style: normal;
+//   font-size: $mx-font-size;
+//   color: $mx-font-color;
+// }

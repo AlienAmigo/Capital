@@ -6,7 +6,9 @@ html(class='page  no-js', lang='ru')
 
   head
     meta(charset='utf-8')
-    title Home
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title MTrading
     link(rel='stylesheet', href='css/style.css')
     script.
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
@@ -23,7 +25,7 @@ html(class='page  no-js', lang='ru')
                 a.logo__link(href='/')
                   img.logo__img(src='img/logo.png', alt='')
         .row
-          .col-lg-5.offset-lg-2
+          .col-md-5.col-lg-5.offset-lg-2
             h1.title.title--head #[strong Get $10,000] on demo trading account
             p.text.text--white Test Forex trading in the real market environment
             a.btn.btn-default(href='#', role='button') GET STARTED
@@ -31,11 +33,15 @@ html(class='page  no-js', lang='ru')
     .free-simulator
       .container
         .row
-          .col-lg-4.offset-lg-2
+          .col-md-6.col-lg-4.offset-lg-2
             p.subhead For Beginner Traders
             h2.title #[strong Free] trading simulator
             p.text Are you new to trading financial markets? – Sign up with MTrading and get from $5,000 on your free demo account to practice Forex, and CFDs trading strategies in real market conditions!
             a.btn.btn-default(href='#', role='button') Open Demo Account
+          .col-md-6.col-lg-6
+            .free-simulator__img-wrap
+              img(src='img/simul.png', alt='')
+
     .benefits
       .container
         .row

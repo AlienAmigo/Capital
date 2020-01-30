@@ -114,20 +114,20 @@ body {
 
 .free-simulator {
   margin-top: 160px;
-  background: url('../img/bg-sim-01.png') no-repeat;
-  background-position: top left;
+  background:
+      url('../img/bg-sim-02.png') no-repeat,
+      url('../img/bg-sim-01.png') no-repeat;
+  background-position:
+    top 57px right 90px,
+    top left;
 
   &__img-wrap {
     display: flex;
     justify-content: center;
     max-width: 100%;
     padding-bottom: 22px;
-    background:
-      url('../img/bg-sim-02.png') no-repeat,
-      url('../img/bg-sim-03.png') no-repeat;
-    background-position:
-      top 57px right,
-      bottom right;
+    background: url('../img/bg-sim-03.png') no-repeat;
+    background-position: bottom right;
 
 
     img {
@@ -138,13 +138,44 @@ body {
 }
 
 .benefits {
+  width: 100%;
+  margin: 27px 0 55px 0;
+  background:
+    url('../img/bg-ben-02.png') no-repeat,
+    url('../img/bg-ben-03.png') no-repeat;
+  background-position:
+    top 170px left 100%,
+    bottom 170px left 50px;
+
+  &__wrap {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 70px;
+    background: url('../img/bg-ben-01.png') no-repeat;
+    background-position: top left calc(#{$ind-1} + #{$gap});
+  }
 
   &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 55px;
+    padding-bottom: 45px;
     text-align: center;
-    font-family: ff-OpenSans;
+    font-family: $ff-OpenSans;
     color: $text-color;
     font-size: 14px;
+  }
 
+  &__img-wrap {
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 10px;
+    img {
+      display: block;
+      width: auto;
+      height: 100%;
+    }
   }
 }
 

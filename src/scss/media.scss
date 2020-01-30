@@ -1,9 +1,45 @@
 @media (max-width: $screen-xs) {
 
+  .title {
+  }
+
+  .subhead {
+  }
+
+  .text {
+  }
+
+  .start {
+    &__gallery {
+      &-wrap {
+        align-self: center;
+        padding: 24px 0 0 5px;
+        background: url('../img/start-frame-xxs.png') top center no-repeat;
+      }
+    }
+  }
 }
 
 @media (min-width: $screen-xs) {
 
+  .title {
+  }
+
+  .subhead {
+  }
+
+  .text {
+  }
+
+  .start {
+    &__gallery {
+      &-wrap {
+        align-self: center;
+        padding: 24px 0 0 120px;
+        background: url('../img/start-frame-xs.png') top center no-repeat;
+      }
+    }
+  }
 }
 
 @media (min-width: $screen-sm) {

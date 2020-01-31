@@ -37,6 +37,11 @@ function copyAssets(cb) {
 }
 exports.copyAssets = copyAssets;
 
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
+
 function compilePug() {
   return src(dir.src + 'pages/**/*.pug')
     .pipe(plumber({

@@ -70,7 +70,7 @@ body {
 
   &:hover {
     box-shadow: none;
-    animation: bgMove 3s ease infinite;
+    animation: bgMove 2s ease infinite;
     background-size: 400% 400%;
     @keyframes bgMove {
       0%    { background-position: 0% 82% }

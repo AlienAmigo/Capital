@@ -44,9 +44,20 @@
       margin-top: 50px;
 
       &-wrap {
+        position: relative;
+        width: 190px;
         padding: 24px 0 0 5px;
         background: url('../img/start-frame-xxs.png') top center no-repeat;
       }
+    }
+
+    &__slides {
+      top: 16px;
+      left: calc(50% - 90px);
+    }
+
+    &__number {
+      left: calc(50% + 75px);
     }
   }
 }
@@ -86,6 +97,15 @@
         background: url('../img/start-frame-xs.png') top center no-repeat;
       }
     }
+
+    &__slides {
+      top: 16px;
+      left: 194px;
+    }
+
+    &__number {
+      left: 357px;
+    }
   }
 }
 
@@ -115,6 +135,15 @@
       padding: 24px 0 0 334px;
       background: url('../img/start-frame-xs.png') top center no-repeat;
       }
+    }
+
+    &__slides {
+      top: 16px;
+      left: 338px;
+    }
+
+    &__number {
+      left: 500px;
     }
   }
 }

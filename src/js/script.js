@@ -9,7 +9,7 @@ function ready(fn) {
 ready(function(){
 
   let mySliderNum = new Glide('#slider-num', {
-    autoplay: 2000,
+    autoplay: 3500,
     type: 'carousel',
     startAt: 0,
     perView: 1

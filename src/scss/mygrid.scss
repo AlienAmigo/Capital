@@ -33,22 +33,19 @@
 .row {
   display: flex;
   flex-flow: row wrap;
-  // jc-
   width: 100%;
   align-self: center;
-  padding: 0 $gap;
+  padding: 0 calc(-1 * $gap);
 }
 
 [class*='col-'] {
-  // width: 100%;
-  margin: 0 calc(#{$gap} * -1);
-  padding: 0 15px;
+  padding: 0 $gap;
 }
 
 @media (max-width: $screen-xs) {
 
   .container {
-    width: calc(100% - (#{$gap} * 2));
+    width: 100%;
   }
 
   .hidden-xs {
@@ -57,8 +54,6 @@
 
   [class*='col-'] {
     width: 100%;
-    // margin: 0 calc(#{$gap} * -1);
-    // padding: 0 15px;
   }
 
   [class*='offset-'] {

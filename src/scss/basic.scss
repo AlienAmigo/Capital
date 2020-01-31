@@ -195,12 +195,36 @@ body {
   background-color: #fefcfd;
 
   &__gallery {
-    min-height: 390px;
+    position: relative;
 
     &-wrap {
-      padding: 24px 0 0 120px;
+      position: relative;
+      z-index: 3;
+      min-height: 390px;
       background: url('../img/start-frame.png') top 3px left no-repeat;
     }
   }
+
+  &__slides {
+    position: absolute;
+    z-index: 12;
+    top: 22px;
+    left: 117px;
+    width: 180px;
+    height: 365px;
+  }
+
+  &__number {
+    position: absolute;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    left: 280px;
+    top: 15px;
+    font-size: 52px;
+    color: $main-color;
+    font-family: $ff-GothamPro-Bold;
+  }
+
 }
 

@@ -10,6 +10,7 @@ html(class='page  no-js', lang='ru')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     title MTrading
     link(rel='stylesheet', href='css/style.css')
+    link(rel='stylesheet', href='css/glide.css')
     script.
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
 
@@ -83,29 +84,27 @@ html(class='page  no-js', lang='ru')
           .col-xs-12.col-sm-12.col-md-6.col-lg-6
             .start__gallery
               .start__gallery-wrap
-                .start__gallery-item
-                  img(src='img/slide01.png', alt='')
-                .start__gallery-item
-                  img(src='img/', alt='')
-                .start__gallery-item
-                  img(src='img/', alt='')
-                .start__gallery-item
-                  img(src='img/', alt='')
+              .start__number
+                .glide(id='slider-num')
+                  .glide__track(data-glide-el='track')
+                    .glide__slides
+                      .glide__slide 01
+                      .glide__slide 02
+                      .glide__slide 03
+                      .glide__slide 04
 
+              .start__slides
+                .glide(id='slider-img')
+                  .glide__track(data-glide-el='track')
+                    .glide__slides
+                      .glide__slide
+                        img(src='img/slide01.png', alt='')
+                      .glide__slide
+                        img(src='img/slide02.png', alt='')
+                      .glide__slide
+                        img(src='img/slide03.png', alt='')
+                      .glide__slide
+                        img(src='img/slide04.png', alt='')
 
-    //- .page__inner
-    //-   .page__content
-
-    //-     block header
-    //-       p Шапка
-
-    //-     block content
-    //-       p Cодержимое
-
-    //-   .page__footer-wrapper
-    //-     block footer
-    //-       p Подвал
-
-    //- block page-bottom
-    //-   script(src='js/vendors.min.js')
-    //-   script(src='js/script.min.js')
+  script(src='js/glide.min.js')
+  script(src='js/script.js')

@@ -28,6 +28,7 @@
     "bemlint": "^1.6.1",
     "browser-sync": "^2.14.0",
     "del": "^4.0.0",
+    "gh-pages": "^2.2.0",
     "glob-exec": "^0.1.1",
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
@@ -49,6 +50,8 @@
     "stylelint-selector-bem-pattern": "^2.0.0"
   },
   "dependencies": {
+    "cpy": "^8.0.0",
+    "path": "^0.12.7",
     "svg4everybody": "^2.1.9"
   },
   "husky": {

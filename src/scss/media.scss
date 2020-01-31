@@ -1,16 +1,46 @@
 @media (max-width: $screen-xs) {
 
-  .title {
+  .logo {
+    margin-bottom: 60px;
   }
 
-  .subhead {
+  .top-section {
+    padding: 30px 0 120px 0;
+    background:
+      url('../img/bg-top-cow.png') no-repeat,
+      url('../img/bg-top-00.png') no-repeat;
+    background-position:
+      bottom right 5%,
+      top center;
   }
 
-  .text {
+  .free-simulator {
+    margin-top: 50px;
+
+    &__img-wrap {
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .benefits {
+
+    &__item {
+      padding-top: 25px;
+      padding-bottom: 20px;
+    }
   }
 
   .start {
+    padding: 50px 0 50px 0;
+
     &__gallery {
+      margin-top: 50px;
+
+
       &-wrap {
         align-self: center;
         padding: 24px 0 0 5px;
@@ -20,19 +50,65 @@
   }
 }
 
-@media (min-width: $screen-xs) {
-
-  .title {
+@media (min-width: $screen-xs) and (max-width: $screen-sm) {
+  .top-section {
+    background:
+      url('../img/bg-top-cow.png') no-repeat,
+      url('../img/bg-top-00.png') no-repeat;
+    background-position:
+      bottom right 5%,
+      top center;
   }
 
-  .subhead {
-  }
+  .free-simulator {
+    margin-top: 50px;
 
-  .text {
+   }
+
+  .benefits {
+
+    &__item {
+      padding-top: 25px;
+      padding-bottom: 20px;
+    }
   }
 
   .start {
+    padding: 50px 0 50px 0;
+
     &__gallery {
+      margin-top: 50px;
+
+      &-wrap {
+        align-self: center;
+        padding: 24px 0 0 120px;
+        background: url('../img/start-frame-xxs.png') top center no-repeat;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-sm) and (max-width: $screen-md) {
+
+  .top-section {
+    background:
+      url('../img/bg-top-cow.png') no-repeat,
+      url('../img/bg-top-man.png') no-repeat,
+      url('../img/bg-top-00.png') no-repeat;
+    background-position:
+      bottom right 5%,
+      bottom right 5%,
+      top center;
+  }
+
+  .free-simulator {
+    margin-top: 100px;
+  }
+
+  .start {
+
+    &__gallery {
+
       &-wrap {
         align-self: center;
         padding: 24px 0 0 120px;
@@ -42,34 +118,37 @@
   }
 }
 
-@media (min-width: $screen-sm) {
+@media (min-width: $screen-md) and (max-width: $screen-lg) {
 
-}
 
-@media (min-width: $screen-md) {
-
-  .title {
-  }
-
-  .subhead {
-  }
-
-  .text {
-  }
 }
 
 @media (min-width: $screen-lg) {
 
-  .title {
+  .free-simulator {
+    background:
+        url('../img/bg-sim-02.png') no-repeat,
+        url('../img/bg-sim-01.png') no-repeat;
+    background-position:
+      top 57px right 90px,
+      top left;
   }
 
-  .subhead {
-  }
+  .benefits {
+    background:
+      url('../img/bg-ben-02.png') no-repeat,
+      url('../img/bg-ben-03.png') no-repeat;
+    background-position:
+      top 170px left 100%,
+      bottom 170px left 50px;
 
-  .text {
+    &__wrap {
+      background:
+        url('../img/bg-ben-01.png') no-repeat,
+        url('../img/bg-ben-04.png') no-repeat,;
+      background-position:
+        top left $ind-1,
+        bottom left
+    }
   }
 }
-
-// @media (min-width: $screen-xl) {
-
-// }

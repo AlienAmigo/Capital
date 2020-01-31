@@ -53,7 +53,6 @@ body {
 .btn {
   display: inline-block;
   padding: 5px 18px;
-  // background-color: $main-color;
   background: linear-gradient(90deg, #854399, $main-color);
   border: none;
   border-radius: 12px;
@@ -63,14 +62,21 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   cursor: poiner;
-  box-shadow: 15px 15px 15px 5px rgba(177, 69, 153, 0.075),
-              -15px -15px 15px 5px rgba(177, 69, 153, 0.075),
-              15px -15px 15px 5px rgba(177, 69, 153, 0.075),
-              -15px 15px 15px 5px rgba(177, 69, 153, 0.075);
+  box-shadow:
+    15px 15px 15px 5px rgba(177, 69, 153, 0.075),
+    -15px -15px 15px 5px rgba(177, 69, 153, 0.075),
+    15px -15px 15px 5px rgba(177, 69, 153, 0.075),
+    -15px 15px 15px 5px rgba(177, 69, 153, 0.075);
 
   &:hover {
     box-shadow: none;
-    background: linear-gradient(90deg, $main-color, #854399, $main-color);
+    animation: bgMove 3s ease infinite;
+    background-size: 400% 400%;
+    @keyframes bgMove {
+      0%    { background-position: 0% 82% }
+      50%   { background-position: 100% 19% }
+      100%  { background-position: 0% 82% }
+    }
   }
 }
 
@@ -80,16 +86,19 @@ body {
 
   &:hover {
     opacity: 0.5;
+    animation: opacityAnim 0.25s ease-in 1;
+    @keyframes opacityAnim {
+      0%    { opacity: 1 }
+      50%   { opacity: 0.75 }
+      100%  { opacity: 0.5 }
+    }
   }
 }
 
 .top-section {
   position: relative;
   width: 100%;
-  padding-top: 72px;
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 200px;
+  padding: 72px 0 200px 0;
   background:
     url('../img/bg-top-cow.png') no-repeat,
     url('../img/bg-top-man.png') no-repeat,
@@ -109,17 +118,20 @@ body {
     left: 0;
     z-index: -1;
     background: linear-gradient(0deg, #10181f, #76346c);
+    background-size: 400% 400%;
+    animation: bgMove 10s ease infinite;
+    @keyframes bgMove {
+      0%    { background-position: 0% 82% }
+      50%   { background-position: 100% 19% }
+      100%  { background-position: 0% 82% }
+    }
+
   }
 }
 
 .free-simulator {
   margin-top: 160px;
-  background:
-      url('../img/bg-sim-02.png') no-repeat,
-      url('../img/bg-sim-01.png') no-repeat;
-  background-position:
-    top 57px right 90px,
-    top left;
+
 
   &__img-wrap {
     display: flex;
@@ -129,11 +141,9 @@ body {
     background: url('../img/bg-sim-03.png') no-repeat;
     background-position: bottom right;
 
-
     img {
       display: block;
       align-self: center;
-      object-fit: contain;
     }
   }
 }
@@ -141,19 +151,17 @@ body {
 .benefits {
   width: 100%;
   margin: 27px 0 55px 0;
-  background:
-    url('../img/bg-ben-02.png') no-repeat,
-    url('../img/bg-ben-03.png') no-repeat;
-  background-position:
-    top 170px left 100%,
-    bottom 170px left 50px;
 
   &__wrap {
     margin-left: auto;
     margin-right: auto;
     padding-top: 60px;
-    background: url('../img/bg-ben-01.png') no-repeat;
-    background-position: top left calc(#{$ind-1} + #{$gap});
+    background:
+      url('../img/bg-ben-01.png') no-repeat,
+      url('../img/bg-ben-04.png') no-repeat,;
+    background-position:
+      top left,
+      bottom left
   }
 
   &__item {

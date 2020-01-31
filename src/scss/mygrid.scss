@@ -33,12 +33,11 @@
 .row {
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
-  align-self: center;
-  padding: 0 calc(-1 * $gap);
+  justify-content: flex-start;
 }
 
 [class*='col-'] {
+
   padding: 0 $gap;
 }
 

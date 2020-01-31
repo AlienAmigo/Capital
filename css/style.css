@@ -361,6 +361,10 @@ body {
   .btn:hover {
     -webkit-box-shadow: none;
             box-shadow: none;
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+    -webkit-transition: all 0.05s;
+    transition: all 0.05s;
     -webkit-animation: bgMove 2s ease infinite;
             animation: bgMove 2s ease infinite;
     background-size: 400% 400%; }
@@ -386,24 +390,20 @@ body {
   margin-bottom: 128px; }
   .logo:hover {
     opacity: 0.5;
-    -webkit-animation: opacityAnim 0.25s ease-in 1;
-            animation: opacityAnim 0.25s ease-in 1; }
+    -webkit-animation: opacityAnim 0.25s ease 1;
+            animation: opacityAnim 0.25s ease 1; }
 
 @-webkit-keyframes opacityAnim {
   0% {
     opacity: 1; }
-  50% {
-    opacity: 0.75; }
   100% {
-    opacity: 0.5; } }
+    opacity: 0.7; } }
 
 @keyframes opacityAnim {
   0% {
     opacity: 1; }
-  50% {
-    opacity: 0.75; }
   100% {
-    opacity: 0.5; } }
+    opacity: 0.7; } }
 
 .top-section {
   position: relative;
@@ -421,18 +421,7 @@ body {
     left: 0;
     z-index: -1;
     background: -webkit-gradient(linear, left bottom, left top, from(#10181f), to(#76346c));
-    background: linear-gradient(0deg, #10181f, #76346c);
-    background-size: 400% 400%;
-    -webkit-animation: bgMove 10s ease infinite;
-            animation: bgMove 10s ease infinite; }
-
-@keyframes bgMove {
-  0% {
-    background-position: 0% 82%; }
-  50% {
-    background-position: 100% 19%; }
-  100% {
-    background-position: 0% 82%; } }
+    background: linear-gradient(0deg, #10181f, #76346c); }
 
 .free-simulator {
   margin-top: 160px; }

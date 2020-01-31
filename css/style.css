@@ -363,8 +363,8 @@ body {
             box-shadow: none;
     -webkit-transform: scale(1.15);
             transform: scale(1.15);
-    -webkit-transition: all 0.05s;
-    transition: all 0.05s;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
     -webkit-animation: bgMove 2s ease infinite;
             animation: bgMove 2s ease infinite;
     background-size: 400% 400%; }
@@ -410,16 +410,16 @@ body {
   width: 100%;
   padding: 72px 0 200px 0;
   background: url("../img/bg-top-cow.png") no-repeat, url("../img/bg-top-man.png") no-repeat, url("../img/bg-top-00.png") no-repeat;
-  background-position: bottom left 80%, bottom left 80%, top center; }
+  background-position: bottom left 80%, bottom left 80%, top center; }
   .top-section:before {
     content: '';
-    position: absolute;
     display: block;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
-    z-index: -1;
+    width: 100%;
+    height: 100%;
     background: -webkit-gradient(linear, left bottom, left top, from(#10181f), to(#76346c));
     background: linear-gradient(0deg, #10181f, #76346c); }
 
@@ -449,7 +449,7 @@ body {
     margin-right: auto;
     padding-top: 60px;
     background: url("../img/bg-ben-01.png") no-repeat, url("../img/bg-ben-04.png") no-repeat;
-    background-position: top left, bottom left; }
+    background-position: top left, bottom left; }
   .benefits__item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -514,7 +514,7 @@ body {
   .top-section {
     padding: 30px 0 120px 0;
     background: url("../img/bg-top-cow.png") no-repeat, url("../img/bg-top-00.png") no-repeat;
-    background-position: bottom right 5%, top center; }
+    background-position: bottom right 5%, top center; }
   .free-simulator {
     margin-top: 50px; }
     .free-simulator__img-wrap img {
@@ -549,7 +549,7 @@ body {
 @media (min-width: 480px) and (max-width: 768px) {
   .top-section {
     background: url("../img/bg-top-cow.png") no-repeat, url("../img/bg-top-00.png") no-repeat;
-    background-position: bottom right 5%, top center; }
+    background-position: bottom right 5%, top center; }
   .free-simulator {
     margin-top: 50px; }
   .benefits__item {
@@ -573,7 +573,7 @@ body {
 @media (min-width: 768px) and (max-width: 992px) {
   .top-section {
     background: url("../img/bg-top-cow.png") no-repeat, url("../img/bg-top-man.png") no-repeat, url("../img/bg-top-00.png") no-repeat;
-    background-position: bottom right 5%, bottom right 5%, top center; }
+    background-position: bottom right 5%, bottom right 5%, top center; }
   .free-simulator {
     margin-top: 100px; }
   .start__gallery {
@@ -591,10 +591,10 @@ body {
 @media (min-width: 1200px) {
   .free-simulator {
     background: url("../img/bg-sim-02.png") no-repeat, url("../img/bg-sim-01.png") no-repeat;
-    background-position: top 57px right 90px, top left; }
+    background-position: top 57px right 90px, top left; }
   .benefits {
     background: url("../img/bg-ben-02.png") no-repeat, url("../img/bg-ben-03.png") no-repeat;
-    background-position: top 170px left 100%, bottom 170px left 50px; }
+    background-position: top 170px left 100%, bottom 170px left 50px; }
     .benefits__wrap {
       background: url("../img/bg-ben-01.png") no-repeat, url("../img/bg-ben-04.png") no-repeat;
       background-position: top left calc(100% / 12 * 1), bottom left; } }

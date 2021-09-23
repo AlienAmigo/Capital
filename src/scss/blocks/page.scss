@@ -1,9 +1,25 @@
 .page {
-  font-family: $font-family;
 
-  &__inner {}
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-  &__content {}
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-family;
+    overflow-x: hidden;
+  }
 
-  &__footer-wrapper {}
+  &__inner {
+    margin: 0 auto;
+    width: $screen-xs;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
 }

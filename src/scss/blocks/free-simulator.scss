@@ -1,0 +1,46 @@
+.free-simulator {
+  @include cols(12);
+  position: relative;
+  margin-top: 120px;
+
+  &::before {
+    @include pseudo();
+    z-index: -1;
+    top: -120px;
+    left: calc((100% - 100vw) / 2);
+    width: 100vw;
+    height: calc(100% + 120px);
+    background:
+      url("../img/bg-sim-01.png") no-repeat top 57px left,
+      url("../img/bg-sim-02.png") no-repeat top 200px right;
+  }
+
+  &__subhead {
+    @include text-subhead;
+  }
+
+  &__title {
+    @include text-title;
+    margin: 20px 0 50px;
+  }
+
+  &__text {
+    @include text-basic;
+    margin-bottom: 55px;
+  }
+
+  &__img-wrap {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    padding-bottom: 22px;
+    background: url("../img/bg-sim-03.png") no-repeat;
+    background-position: bottom right;
+
+    img {
+      display: block;
+      align-self: center;
+      object-fit: contain;
+    }
+  }
+}

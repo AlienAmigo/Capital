@@ -1,0 +1,48 @@
+.benefits {
+  @include cols(12);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 120px 0 55px;
+
+  &::before {
+    @include pseudo();
+    z-index: -1;
+    top: -120px;
+    left: calc((100% - 100vw) / 2);
+    width: 100vw;
+    height: 100%;
+    background:
+    url('../img/bg-ben-01.png') no-repeat top 35px left calc(((100vw - 380px) / 2) - 20px),
+    url('../img/bg-ben-02.png') no-repeat top 170px left 100%,
+      url('../img/bg-ben-03.png') no-repeat bottom 170px left 50px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: calc(#{$gap} * 2);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+    // background-position: top left calc(#{$ind-1} + #{$gap});
+
+    &::before {
+      @include pseudo();
+      z-index: -1;
+      top: 0;
+      left: calc((100% - 100vw) / 2);
+      width: 100vw;
+      height: 100%;
+      background:
+        url('../img/bg-ben-04.png') no-repeat bottom left calc(((100vw - 380px) / 2) - 20px);
+    }
+  }
+
+  &__title {
+    @include text-title;
+    text-align: center;
+  }
+}

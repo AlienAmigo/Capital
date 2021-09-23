@@ -1,0 +1,39 @@
+.benefits-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 160px;
+  margin: 0;
+  // padding: 55px 0 45px;
+  padding: 25px 0 20px;
+  text-align: center;
+  font-family: $ff-OpenSans;
+  color: $text-color;
+  font-size: 14px;
+
+  &.invisible {
+    visibility: hidden;
+  }
+
+  &:not(.invisible) {
+    &:nth-of-type(2n + 1) {
+      animation: fadeInLeft 0.5s ease-in;
+    }
+
+    &:nth-of-type(2n) {
+      animation: fadeInRight 0.5s ease-in;
+    }
+  }
+
+  &__img-wrap {
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 10px;
+
+    img {
+      display: block;
+      width: auto;
+      height: 100%;
+    }
+  }
+}

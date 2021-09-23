@@ -1,0 +1,50 @@
+$main-color:          #b14599;
+$main-color-2:        rgba(133, 67, 153, 0.5);
+$warning-color:       #fdc05d;
+
+$gray-light:          #f2f2f2;
+$gray-dark:           #10181f;
+
+$text-color:          #2f2f2f;
+
+$font-family:         -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+$font-size:           14px;
+$line-height:         1.4;
+
+
+// Переменные сетки
+$screen-xs:           360px;
+$screen-sm:           768px;
+$screen-lg:           1200px;
+
+$gap:                 15px;
+$cols:                12;
+
+// $cols-12:             calc((100% / 12) * 12);
+// $cols-11:             calc((100% / 12) * 11);
+// $cols-10:             calc((100% / 12) * 10);
+// $cols-9:              calc((100% / 12) * 9);
+// $cols-8:              calc((100% / 12) * 8);
+// $cols-7:              calc((100% / 12) * 7);
+// $cols-6:              calc((100% / 12) * 6);
+// $cols-5:              calc((100% / 12) * 5);
+// $cols-4:              calc((100% / 12) * 4);
+// $cols-3:              calc((100% / 12) * 3);
+// $cols-2:              calc((100% / 12) * 2);
+// $cols-1:              calc((100% / 12) * 1);
+
+@function col($i) {
+  $width: calc((100% / #{$cols}) * #{$i});
+  @return $width;
+}
+
+@function col-px($i, $screen) {
+  $width: calc(($screen / #{$cols}) * #{$i});
+  @return $width;
+}
+
+@mixin cols($c) {
+  width: col($c);
+  padding-left: $gap;
+  padding-right: $gap;
+}

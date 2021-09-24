@@ -1,8 +1,8 @@
 .benefits {
-  @include cols(12);
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100%;
   margin: 120px 0 55px;
 
   &::before {

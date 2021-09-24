@@ -15,23 +15,10 @@ $line-height:         1.4;
 // Переменные сетки
 $screen-xs:           360px;
 $screen-sm:           768px;
-$screen-lg:           1200px;
+$screen-lg:           1280px;
 
 $gap:                 15px;
 $cols:                12;
-
-// $cols-12:             calc((100% / 12) * 12);
-// $cols-11:             calc((100% / 12) * 11);
-// $cols-10:             calc((100% / 12) * 10);
-// $cols-9:              calc((100% / 12) * 9);
-// $cols-8:              calc((100% / 12) * 8);
-// $cols-7:              calc((100% / 12) * 7);
-// $cols-6:              calc((100% / 12) * 6);
-// $cols-5:              calc((100% / 12) * 5);
-// $cols-4:              calc((100% / 12) * 4);
-// $cols-3:              calc((100% / 12) * 3);
-// $cols-2:              calc((100% / 12) * 2);
-// $cols-1:              calc((100% / 12) * 1);
 
 @function col($i) {
   $width: calc((100% / #{$cols}) * #{$i});
@@ -39,7 +26,7 @@ $cols:                12;
 }
 
 @function col-px($i, $screen) {
-  $width: calc(($screen / #{$cols}) * #{$i});
+  $width: calc((#{$screen} / #{$cols}) * #{$i});
   @return $width;
 }
 

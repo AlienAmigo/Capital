@@ -26,7 +26,7 @@
     background: linear-gradient(90deg, $main-color, #854399, $main-color);
     transform: scale(1.15);
     transition: all 0.35s;
-    animation: bgMove 1s ease infinite;
+    animation: bgMove 3s ease infinite;
     background-size: 400% 400%;
 
     @keyframes bgMove {

@@ -23,3 +23,19 @@
     flex-direction: column;
   }
 }
+
+@media screen and (min-width: $screen-sm) {
+  .page {
+    &__inner {
+      width: $screen-sm;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .page {
+    &__inner {
+      width: $screen-lg;
+    }
+  }
+}

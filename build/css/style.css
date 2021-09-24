@@ -2614,6 +2614,14 @@
       -ms-flex-direction: column;
           flex-direction: column; }
 
+@media screen and (min-width: 768px) {
+  .page__inner {
+    width: 768px; } }
+
+@media screen and (min-width: 1280px) {
+  .page__inner {
+    width: 1280px; } }
+
 .btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2643,8 +2651,8 @@
             transform: scale(1.15);
     -webkit-transition: all 0.35s;
     transition: all 0.35s;
-    -webkit-animation: bgMove 1s ease infinite;
-            animation: bgMove 1s ease infinite;
+    -webkit-animation: bgMove 3s ease infinite;
+            animation: bgMove 3s ease infinite;
     background-size: 400% 400%; }
 
 @-webkit-keyframes bgMove {
@@ -2664,9 +2672,6 @@
     background-position: 0% 82%; } }
 
 .banner {
-  width: calc((100% / 12) * 12);
-  padding-left: 15px;
-  padding-right: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2675,19 +2680,19 @@
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  padding-top: 40px;
-  padding-bottom: 70px; }
+  width: 100%;
+  padding: 40px 15px 70px; }
   .banner:before {
     content: "";
     display: block;
     position: absolute;
-    width: 100vw;
+    width: calc(100vw + 360px);
     height: 100%;
     z-index: -1;
     top: 0;
-    left: calc((100% - 100vw) / 2);
-    background: url("../img/bg-top-00.png") no-repeat top center, url("../img/bg-top-cow-xs.png") no-repeat bottom left calc(50vw + 110px), url("../img/bg-top-man-xs.png") no-repeat bottom left calc(50vw - 70px), -webkit-gradient(linear, left bottom, left top, from(#10181f), to(#76346c));
-    background: url("../img/bg-top-00.png") no-repeat top center, url("../img/bg-top-cow-xs.png") no-repeat bottom left calc(50vw + 110px), url("../img/bg-top-man-xs.png") no-repeat bottom left calc(50vw - 70px), linear-gradient(0deg, #10181f, #76346c); }
+    left: calc(((100% - 100vw) / 2) - 180px);
+    background: url("../img/bg-top-cow-xs.png") no-repeat bottom right 230px, url("../img/bg-top-00.png") no-repeat top center, -webkit-gradient(linear, left bottom, left top, from(#10181f), to(#76346c));
+    background: url("../img/bg-top-cow-xs.png") no-repeat bottom right 230px, url("../img/bg-top-00.png") no-repeat top center, linear-gradient(0deg, #10181f, #76346c); }
   .banner__logo {
     -webkit-transition: opacity 0.25s ease-in;
     transition: opacity 0.25s ease-in;
@@ -2701,6 +2706,7 @@
     font-size: 42px;
     line-height: 1.12em;
     color: #10181f;
+    max-width: 360px;
     margin: 60px 0 37px;
     color: #fff;
     text-transform: uppercase; }
@@ -2715,22 +2721,99 @@
     margin: 0 50% 42px 0;
     color: #fff; }
 
+@media screen and (min-width: 360px) {
+  .banner::before {
+    width: 100vw;
+    left: calc((100% - 100vw) / 2);
+    background: url("../img/bg-top-cow.png") no-repeat bottom right 5%, url("../img/bg-top-00.png") no-repeat top center, -webkit-gradient(linear, left bottom, left top, from(#10181f), to(#76346c));
+    background: url("../img/bg-top-cow.png") no-repeat bottom right 5%, url("../img/bg-top-00.png") no-repeat top center, linear-gradient(0deg, #10181f, #76346c); } }
+
+@media screen and (min-width: 768px) {
+  .banner {
+    padding: 65px 15px 150px; }
+    .banner::before {
+      background: url("../img/bg-top-cow.png") no-repeat bottom right 5vw, url("../img/bg-top-man.png") no-repeat bottom right 5vw, url("../img/bg-top-00.png") no-repeat top center, -webkit-gradient(linear, left bottom, left top, from(#10181f), to(#76346c));
+      background: url("../img/bg-top-cow.png") no-repeat bottom right 5vw, url("../img/bg-top-man.png") no-repeat bottom right 5vw, url("../img/bg-top-00.png") no-repeat top center, linear-gradient(0deg, #10181f, #76346c); }
+    .banner__title {
+      max-width: 500px;
+      margin: 130px 0 50px; }
+    .banner__text {
+      margin-bottom: 50px; } }
+
+@media screen and (min-width: 1280px) {
+  .banner {
+    width: 1280px;
+    padding: 75px 15px 200px calc(calc((1280px / 12) * 2) + 15px); }
+    .banner::before {
+      background: url("../img/bg-top-cow.png") no-repeat bottom right calc((100vw - 100%) / 2 + 114px), url("../img/bg-top-man.png") no-repeat bottom right calc((100vw - 100%) / 2), url("../img/bg-top-00.png") no-repeat top center, -webkit-gradient(linear, left bottom, left top, from(#10181f), to(#76346c));
+      background: url("../img/bg-top-cow.png") no-repeat bottom right calc((100vw - 100%) / 2 + 114px), url("../img/bg-top-man.png") no-repeat bottom right calc((100vw - 100%) / 2), url("../img/bg-top-00.png") no-repeat top center, linear-gradient(0deg, #10181f, #76346c); } }
+
 .free-simulator {
-  width: calc((100% / 12) * 12);
-  padding-left: 15px;
-  padding-right: 15px;
   position: relative;
-  margin-top: 160px; }
+  width: 100%;
+  margin-top: 120px; }
   .free-simulator::before {
     content: "";
     display: block;
     position: absolute;
     z-index: -1;
-    top: 0;
+    top: -120px;
     left: calc((100% - 100vw) / 2);
     width: 100vw;
-    height: 100%;
-    background: url("../img/bg-sim-02.png") no-repeat top 57px right 90px, url("../img/bg-sim-01.png") no-repeat top left; }
+    height: calc(100% + 120px);
+    background: url("../img/bg-sim-01.png") no-repeat top 120px left, url("../img/bg-sim-02.png") no-repeat top 200px right; }
+  .free-simulator__subhead {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: rgba(133, 67, 153, 0.5);
+    font-family: "OpenSans SemiBold", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+  .free-simulator__title {
+    font-family: "GothamPro Light", Arial, sans-serif;
+    font-size: 42px;
+    line-height: 1.12em;
+    color: #10181f;
+    margin: 20px 0 50px; }
+    .free-simulator__title strong {
+      font-family: "GothamPro Bold", Arial, sans-serif; }
+  .free-simulator__text {
+    font-size: 12px;
+    font-family: "OpenSans", Arial, sans-serif;
+    color: #10181f;
+    margin-bottom: 55px; }
+  .free-simulator__img-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 100%;
+    padding-bottom: 22px;
+    background: url("../img/bg-sim-03.png") no-repeat;
+    background-position: bottom right; }
+    .free-simulator__img-wrap img {
+      display: block;
+      -ms-flex-item-align: center;
+          align-self: center;
+      -o-object-fit: contain;
+         object-fit: contain; }
+
+.free-simulator {
+  position: relative;
+  width: 100%;
+  margin-top: 120px; }
+  .free-simulator::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: -120px;
+    left: calc((100% - 100vw) / 2);
+    width: 100vw;
+    height: calc(100% + 120px);
+    background: url("../img/bg-sim-01.png") no-repeat top 120px left, url("../img/bg-sim-02.png") no-repeat top 200px right; }
   .free-simulator__subhead {
     margin-bottom: 10px;
     font-size: 14px;
@@ -2770,9 +2853,6 @@
          object-fit: contain; }
 
 .benefits {
-  width: calc((100% / 12) * 12);
-  padding-left: 15px;
-  padding-right: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2781,17 +2861,18 @@
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  margin: 27px 0 55px; }
+  width: 100%;
+  margin: 120px 0 55px; }
   .benefits::before {
     content: "";
     display: block;
     position: absolute;
     z-index: -1;
-    top: 0;
+    top: -120px;
     left: calc((100% - 100vw) / 2);
     width: 100vw;
     height: 100%;
-    background: url("../img/bg-ben-02.png") no-repeat top 170px left 100%, url("../img/bg-ben-03.png") no-repeat bottom 170px left 50px; }
+    background: url("../img/bg-ben-01.png") no-repeat top 35px left calc(((100vw - 380px) / 2) - 20px), url("../img/bg-ben-02.png") no-repeat top 170px left 100%, url("../img/bg-ben-03.png") no-repeat bottom 170px left 50px; }
   .benefits__wrap {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2815,7 +2896,7 @@
       left: calc((100% - 100vw) / 2);
       width: 100vw;
       height: 100%;
-      background: url("../img/bg-ben-01.png") no-repeat top left calc(((100vw - 380px) / 2) - 20px), url("../img/bg-ben-04.png") no-repeat bottom left calc(((100vw - 380px) / 2) - 20px); }
+      background: url("../img/bg-ben-04.png") no-repeat bottom left calc(((100vw - 380px) / 2) - 20px); }
   .benefits__title {
     font-family: "GothamPro Light", Arial, sans-serif;
     font-size: 42px;
@@ -2864,7 +2945,7 @@
       height: 100%; }
 
 .start {
-  padding: 124px 0 180px 0;
+  padding: 80px 0 120px 0;
   width: 100%; }
   .start__subhead {
     margin-bottom: 10px;

@@ -1,10 +1,13 @@
 .btn {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: max-content;
-  padding: 7px 18px 8px;
-  background: linear-gradient(90deg, #854399, $main-color);
+  min-height: 24px;
   border: none;
   border-radius: 14px;
+  padding: 7px 18px;
+  background: linear-gradient(90deg, #854399, $main-color);
   font-size: 12px;
   color: #fff;
   font-family: $ff-OpenSans-Bold;
@@ -26,19 +29,22 @@
     background: linear-gradient(90deg, $main-color, #854399, $main-color);
     transform: scale(1.15);
     transition: all 0.35s;
-    animation: bgMove 1s ease infinite;
+    animation: bgMove 3s ease infinite;
     background-size: 400% 400%;
 
     @keyframes bgMove {
+
       0% {
-        background-position: 0% 82%
-      };
-      50%  {
-        background-position: 100% 19%
-      };
+        background-position: 0% 82%;
+      }
+
+      50% {
+        background-position: 100% 19%;
+      }
+
       100% {
-        background-position: 0% 82%
-      };
+        background-position: 0% 82%;
+      }
     }
   }
 }

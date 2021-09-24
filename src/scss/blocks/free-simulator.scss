@@ -1,7 +1,8 @@
 .free-simulator {
-  @include cols(12);
   position: relative;
+  width: 100%;
   margin-top: 120px;
+  padding: 0 $gap;
 
   &::before {
     @include pseudo();
@@ -11,12 +12,13 @@
     width: 100vw;
     height: calc(100% + 120px);
     background:
-      url("../img/bg-sim-01.png") no-repeat top 57px left,
-      url("../img/bg-sim-02.png") no-repeat top 200px right;
+      url('../img/bg-sim-01.png') no-repeat top 120px left,
+      url('../img/bg-sim-02.png') no-repeat top 200px right;
   }
 
   &__subhead {
     @include text-subhead;
+    margin: 0;
   }
 
   &__title {
@@ -34,13 +36,66 @@
     justify-content: center;
     max-width: 100%;
     padding-bottom: 22px;
-    background: url("../img/bg-sim-03.png") no-repeat;
+    background: url('../img/bg-sim-03.png') no-repeat;
     background-position: bottom right;
 
     img {
       display: block;
       align-self: center;
       object-fit: contain;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-xs) {
+
+  .free-simulator {
+    margin-top: 150px;
+
+    &::before {
+      @include pseudo();
+      height: calc(100% + 180px);
+      background:
+        url('../img/bg-sim-01.png') no-repeat top 120px left,
+        url('../img/bg-sim-02.png') no-repeat top 200px right;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+
+  .free-simulator {
+    display: flex;
+    flex-direction: row;
+    width: $screen-lg;
+    margin: 160px auto 0;
+    padding: 0;
+
+    &::before {
+      height: calc(100% + 160px);
+    }
+
+    &__text-wrapper {
+      @include cols-px(6, $screen-lg);
+      display: flex;
+      flex-direction: column;
+      width: col(6);
+      padding: 0 $gap 0 calc(#{col(2)} + #{$gap});
+    }
+
+    &__text {
+      width: 300px;
+    }
+
+    &__img-wrap {
+      display: flex;
+      justify-content: flex-end;
+      width: col(6);
+      max-width: 100%;
+      min-height: 360px;
+      padding: 0 calc(#{col(2)} + #{$gap}) 22px $gap;
+      background: url('../img/bg-sim-03.png') no-repeat;
+      background-position: bottom right;
     }
   }
 }

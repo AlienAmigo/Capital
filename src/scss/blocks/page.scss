@@ -14,12 +14,32 @@
   }
 
   &__inner {
-    margin: 0 auto;
     width: $screen-xs;
+    margin: 0 auto;
   }
 
   &__content {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+
+  .page {
+
+    &__inner {
+      width: $screen-sm;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+
+  .page {
+
+    &__inner {
+      width: $screen-lg;
+    }
   }
 }

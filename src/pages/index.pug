@@ -17,7 +17,8 @@ html(class='page  no-js', lang='ru')
     link(rel="manifest", href="img/favicon/site.webmanifest")
     link(rel="mask-icon", href="img/favicon/safari-pinned-tab.svg", color="#5bbad5")
     meta(name="msapplication-TileColor", content="#9f00a7")
-    meta(name="theme-color", content="#ffffff")
+    //- tab color
+    meta(name="theme-color", content="plum")
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -28,73 +29,62 @@ html(class='page  no-js', lang='ru')
   body
     noscript У вас отключен JavaScript. Это пугает.
 
-    .top-section
-      .container
-        .row
-          .col-lg-4.offset-lg-2
-            header
-              .logo
-                a.logo__link(href='/')
-                  img.logo__img(src='img/logo.png', alt='')
-        .row
-          .col-xs-12.col-sm-9.col-md-7.col-lg-5.offset-lg-2
-            h1.title.title--head #[strong Get $10,000] on demo trading account
-            p.text.text--white Test Forex trading in the real market environment
-            a.btn.btn-default(href='#', role='button') GET STARTED
+    .page__inner
 
-    .free-simulator
-      .container
-        .row
-          .col-xs-12.col-sm-12.col-md-6.col-lg-4.offset-lg-2
-            p.subhead For Beginner Traders
-            h2.title #[strong Free] trading simulator
-            p.text Are you new to trading financial markets? – Sign up with MTrading and get from $5,000 on your free demo account to practice Forex, and CFDs trading strategies in real market conditions!
-            a.btn.btn-default(href='#', role='button') Open Demo Account
-          .col-xs-12.col-sm-12.col-md-6.col-lg-6
-            .free-simulator__img-wrap
-              img(src='img/simul.png', alt='')
+      header.banner
+        .banner__logo
+          a.logo__link(href='/')
+            img.logo__img(src='img/logo.png', alt='')
+        h1.banner__title #[strong Get $10,000] on demo trading account
+        p.banner__text Test Forex trading in the real market environment
+        a.btn(href='#', role='button') GET STARTED
 
-    .benefits
-      .container.benefits__wrap
-        .row
-          h2.title.title--center Demo Account #[strong benefits]
-        .row
-          .col-xs-6.col-sm-4.offset-md-2.col-md-2.benefits__item
-            .benefits__img-wrap
-              img(src='img/01.png', alt='')
-            p Real trading #[br]experience without risk
-          .col-xs-6.col-sm-4.col-md-4.benefits__item
-            .benefits__img-wrap
-              img(src='img/03.png', alt='')
-            p Forex and CFDs trading #[br]in real market conditions
-          .col-xs-6.col-sm-4.col-md-2.benefits__item
-            .benefits__img-wrap
-              img(src='img/05.png', alt='')
-            p Professional #[br]individual support
-          .col-xs-6.col-sm-4.offset-md-2.col-md-2.benefits__item
-            .benefits__img-wrap
-              img(src='img/02.png', alt='')
-            p Based on MetaTrader 4 #[br]trading platform
-          .col-xs-6.col-sm-4.col-md-4.benefits__item
-            .benefits__img-wrap
-              img(src='img/04.png', alt='')
-            p All trading #[br]strategies allowed
-          .col-xs-6.col-sm-4.col-md-2.benefits__item
-            .benefits__img-wrap
-              img(src='img/06.png', alt='')
-            p Unlimited demo balance #[br]starting at $5,000
+      main.page__content
+        section.free-simulator
+          .free-simulator__text-wrapper
+            p.free-simulator__subhead For Beginner Traders
+            h2.free-simulator__title #[strong Free] trading simulator
+            p.free-simulator__text Are you new to trading financial markets? – Sign up with MTrading and get from $5,000 on your free demo account to practice Forex, and CFDs trading strategies in real market conditions!
+            a.btn(href='#', role='button') Open Demo Account
+          .free-simulator__img-wrap
+            img(src='img/simul.png', alt='')
 
-    .start
-      .container
-        .row
-          .col-xs-12.col-sm-12.col-md-6.offset-md-0.col-lg-4.offset-lg-2
-            p.subhead Gain Trading Experience
-            h2.title Start in less#[br]than #[strong 5 minutes]
-            p.text Gain the experience and enter the market with confidence
-            a.btn.btn-default(href='#', role='button') Open Demo Account
-          .col-xs-12.col-sm-12.col-md-6.col-lg-6
-            .start__gallery
-              .start__gallery-wrap
+        section.benefits
+          h2.benefits__title Demo Account #[strong benefits]
+          .benefits__wrap
+            .benefits-item.invisible
+              .benefits-item__img-wrap
+                img(src='img/01.png', alt='')
+              p Real trading #[br]experience without risk
+            .benefits-item.invisible
+              .benefits-item__img-wrap
+                img(src='img/03.png', alt='')
+              p Forex and CFDs trading #[br]in real market conditions
+            .benefits-item.invisible
+              .benefits-item__img-wrap
+                img(src='img/05.png', alt='')
+              p Professional #[br]individual support
+            .benefits-item.invisible
+              .benefits-item__img-wrap
+                img(src='img/02.png', alt='')
+              p Based on MetaTrader 4 #[br]trading platform
+            .benefits-item.invisible
+              .benefits-item__img-wrap
+                img(src='img/04.png', alt='')
+              p All trading #[br]strategies allowed
+            .benefits-item.invisible
+              .benefits-item__img-wrap
+                img(src='img/06.png', alt='')
+              p Unlimited demo balance #[br]starting at $5,000
+
+        section.start
+          .start__text-wrap
+            p.start__subhead Gain Trading Experience
+            h2.start__title Start in less#[br]than #[strong 5 minutes]
+            p.start__text Gain the experience and enter the market with confidence
+            a.btn(href='#', role='button') Open Demo Account
+          .start__gallery
+            .start__gallery-wrap
               .start__number
                 .glide(id='slider-num')
                   .glide__track(data-glide-el='track')

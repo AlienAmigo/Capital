@@ -1,0 +1,99 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  padding: 40px $gap 70px;
+
+  &:before {
+    @include pseudo();
+    z-index: -1;
+    top: 0;
+    left: calc(((100% - 100vw) / 2) - 180px);
+    width: calc(100vw + 360px);
+    height: 100%;
+    background:
+      url('../img/bg-top-cow-xs.png') no-repeat bottom right 230px,
+      url('../img/bg-top-00.png') no-repeat top center,
+      linear-gradient(0deg, #10181f, #76346c);
+  }
+
+  &__logo {
+    @include hover();
+    display: block;
+    width: 128px;
+  }
+
+  &__title {
+    @include text-title;
+    max-width: $screen-xs;
+    margin: 60px 0 37px;
+    color: #fff;
+    text-transform: uppercase;
+
+    strong {
+      display: block;
+    }
+  }
+
+  &__text {
+    @include text-basic;
+    margin: 0 50% 42px 0;
+    color: #fff;
+  }
+}
+
+@media screen and (min-width: $screen-xs) {
+
+  .banner {
+
+    &::before {
+      left: calc((100% - 100vw) / 2);
+      width: 100vw;
+      background:
+        url('../img/bg-top-cow.png') no-repeat bottom right 5%,
+        url('../img/bg-top-00.png') no-repeat top center,
+        linear-gradient(0deg, #10181f, #76346c);
+    }
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+
+  .banner {
+    padding: 65px $gap 150px;
+
+    &::before {
+      background:
+        url('../img/bg-top-cow.png') no-repeat bottom right 5vw,
+        url('../img/bg-top-man.png') no-repeat bottom right 5vw,
+        url('../img/bg-top-00.png') no-repeat top center,
+        linear-gradient(0deg, #10181f, #76346c);
+    }
+
+    &__title {
+      max-width: 500px;
+      margin: 130px 0 50px;
+    }
+
+    &__text {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+
+  .banner {
+    width: $screen-lg;
+    padding: 75px $gap 200px calc(#{col-px(2, $screen-lg)} + #{$gap});
+
+    &::before {
+      background:
+        url('../img/bg-top-cow.png') no-repeat bottom right calc((100vw - 100%) / 2 + 114px),
+        url('../img/bg-top-man.png') no-repeat bottom right calc((100vw - 100%) / 2),
+        url('../img/bg-top-00.png') no-repeat top center,
+        linear-gradient(0deg, #10181f, #76346c);
+    }
+  }
+}

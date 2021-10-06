@@ -1,0 +1,43 @@
+$main-color:          #b14599;
+$main-color-2:        rgba(133, 67, 153, 0.5);
+$warning-color:       #fdc05d;
+
+$gray-light:          #f2f2f2;
+$gray-dark:           #10181f;
+
+$text-color:          #2f2f2f;
+
+$font-family:         -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+$font-size:           14px;
+$line-height:         1.4;
+
+
+// Переменные сетки
+$screen-xs:           360px;
+$screen-sm:           768px;
+$screen-lg:           1280px;
+
+$gap:                 15px;
+$cols:                12;
+
+@function col($i) {
+  $width: calc((100% / #{$cols}) * #{$i});
+  @return $width;
+}
+
+@function col-px($i, $screen) {
+  $width: calc((#{$screen} / #{$cols}) * #{$i});
+  @return $width;
+}
+
+@mixin cols($c) {
+  width: col($c);
+  padding-left: $gap;
+  padding-right: $gap;
+}
+
+@mixin cols-px($c, $scr) {
+  width: col-px($c, $scr);
+  padding-left: $gap;
+  padding-right: $gap;
+}

@@ -1,9 +1,45 @@
 .page {
-  font-family: $font-family;
 
-  &__inner {}
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-  &__content {}
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-family;
+    overflow-x: hidden;
+  }
 
-  &__footer-wrapper {}
+  &__inner {
+    width: $screen-xs;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+
+  .page {
+
+    &__inner {
+      width: $screen-sm;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+
+  .page {
+
+    &__inner {
+      width: $screen-lg;
+    }
+  }
 }

@@ -1,8 +1,13 @@
-@import 'variables';
-@import 'mygrid';
+@import 'animate';
 @import 'fonts';
-@import 'basic';
-@import 'media';
-
+@import 'variables';
+@import 'mixins';
+@import 'text-mixins';
 
 @import 'blocks/page';
+@import 'blocks/btn';
+@import 'blocks/banner';
+@import 'blocks/free-simulator';
+@import 'blocks/benefits';
+@import 'blocks/benefits-item';
+@import 'blocks/start';

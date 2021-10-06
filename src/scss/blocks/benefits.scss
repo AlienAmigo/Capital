@@ -1,0 +1,111 @@
+.benefits {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin: 120px auto 55px;
+  padding: 0 $gap;
+
+  &::before {
+    @include pseudo();
+    z-index: -1;
+    top: -120px;
+    left: calc((100% - 100vw) / 2);
+    width: 100vw;
+    height: calc(100% + 120px);
+    background:
+      url('../img/bg-ben-01.png') no-repeat top 35px left calc(((100vw - #{$screen-xs}) / 2) - 10px),
+      url('../img/bg-ben-02.png') no-repeat top 170px left 100%,
+      url('../img/bg-ben-03.png') no-repeat bottom 170px left 50px;
+  }
+
+  &__wrap {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    left: 50%;
+    width: col-px(4, $screen-lg);
+    max-width: 100vw;
+    margin-top: 60px;
+    transform: translateX(-50%);
+
+    &::before {
+      @include pseudo();
+      z-index: -1;
+      top: 0;
+      left: calc((100% - 100vw) / 2);
+      width: 100vw;
+      height: 100%;
+      background: url('../img/bg-ben-04.png') no-repeat bottom left calc(((100vw - 380px) / 2) - 20px);
+    }
+  }
+
+  &__title {
+    @include text-title;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+
+  .benefits {
+
+    &::before {
+      background:
+        url('../img/bg-ben-01.png') no-repeat top 35px left calc(((100vw - #{$screen-sm} - 20px) / 2) - 20px),
+        url('../img/bg-ben-02.png') no-repeat top 170px left 100%,
+        url('../img/bg-ben-03.png') no-repeat bottom 90px left 50px;
+    }
+
+    &__wrap {
+      padding-bottom: 20px;
+      gap: $gap 0;
+
+      &::before {
+        @include pseudo();
+        z-index: -1;
+        top: 0;
+        left: calc((100% - 100vw) / 2);
+        background: url('../img/bg-ben-04.png') no-repeat bottom left calc((100vw - #{$screen-sm}) / 2);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+
+  .benefits {
+
+    &::before {
+      background:
+        url('../img/bg-ben-01.png') no-repeat top 50px left calc(#{col-px(1, $screen-lg)}),
+        url('../img/bg-ben-02.png') no-repeat top 170px left 100%,
+        url('../img/bg-ben-03.png') no-repeat bottom 100px left 50px;
+    }
+
+    &__wrap {
+      gap: 0 col-px(1, $screen-lg);
+      left: 0;
+      width: col-px(12, $screen-lg);
+      max-width: $screen-lg;
+      padding: 0 col-px(2, $screen-lg) 30px;
+      transform: translateX(0);
+
+      &::before {
+        @include pseudo();
+        z-index: -1;
+        top: 0;
+        left: calc((100% - 100vw) / 2);
+        width: 100vw;
+        height: 100%;
+        background: url('../img/bg-ben-04.png') no-repeat bottom left calc(((100vw - 768px) / 2) - 20px);
+      }
+    }
+
+    &__title {
+      @include text-title;
+      text-align: center;
+    }
+  }
+}

@@ -45,6 +45,4 @@ ready(function () {
         item.classList.remove("invisible");
     });
   });
-
-  console.log(myBenefitsItems);
 });
